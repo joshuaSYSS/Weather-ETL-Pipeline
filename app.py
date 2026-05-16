@@ -22,7 +22,8 @@ fig = px.scatter_mapbox(
     color_continuous_scale="RdYlBu_r",
     size_max=40,
     zoom=9,
-    mapbox_style="carto-positron"
+    mapbox_style="carto-positron",
+    center={"lat": 22.35, "lon": 114.1},
 )
 
 fig.update_layout(

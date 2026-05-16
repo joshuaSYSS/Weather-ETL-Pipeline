@@ -9,4 +9,5 @@ def transform_weather_data(temps, locations):
     for name, coords in locations.items()
     ])
     df = df.merge(locations_df, left_on='place', right_on='place', how='left')
+    print(df)
     return df
