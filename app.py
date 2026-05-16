@@ -9,6 +9,8 @@ conn = sqlite3.connect("weather.db")
 
 df = pd.read_sql("SELECT place, value, lat, lon FROM weather_obs", conn)
 
+df["dot_size"] = df["temperature"] / 10
+
 fig = px.scatter_mapbox(
     df,
     lat="lat",
