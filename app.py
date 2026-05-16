@@ -22,4 +22,9 @@ fig = px.scatter_mapbox(
     mapbox_style="carto-positron"
 )
 
+fig.update_layout(
+    height=800, 
+    width=1000
+)
+
 st.plotly_chart(fig, use_container_width=True)
