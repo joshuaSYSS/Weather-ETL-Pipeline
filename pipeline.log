@@ -2,3 +2,7 @@
 2026-05-16 13:53:10,341 - INFO - Data extraction completed successfully.
 2026-05-16 13:53:10,346 - INFO - Data transformation completed successfully.
 2026-05-16 13:53:10,364 - INFO - Data loading completed successfully.
+2026-05-16 14:35:11,563 - INFO - Pipeline run started
+2026-05-16 14:35:11,887 - INFO - Data extraction completed successfully.
+2026-05-16 14:35:11,905 - INFO - Data transformation completed successfully.
+2026-05-16 14:35:11,917 - INFO - Data loading completed successfully.
