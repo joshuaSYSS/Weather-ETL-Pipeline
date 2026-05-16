@@ -1,16 +1,25 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-from main import run_pipeline
+import plotly.express as px
 
-run_pipeline()
-
-st.title("Hong Kong Weather Dashboard")
+st.title("Hong Kong Weather Map")
 
 conn = sqlite3.connect("weather.db")
-df = pd.read_sql("SELECT * FROM weather_obs DESC LIMIT 100", conn)
 
-st.write("Latest Weather Data")
-st.dataframe(df)
+df = pd.read_sql("SELECT place, temperature, lat, lon FROM weather_obs", conn)
 
-st.line_chart(df[['place', 'value']].set_index('place'))
+fig = px.scatter_mapbox(
+    df,
+    lat="lat",
+    lon="lon",
+    color="temperature",              
+    hover_name="place",               
+    hover_data=["temperature"],       
+    color_continuous_scale="RdYlBu_r",
+    size_max=15,
+    zoom=10,
+    mapbox_style="carto-positron"     # clean background map
+)
+
+st.plotly_chart(fig, use_container_width=True)
