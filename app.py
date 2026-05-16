@@ -13,4 +13,4 @@ df = pd.read_sql("SELECT * FROM weather_obs DESC LIMIT 100", conn)
 st.write("Latest Weather Data")
 st.dataframe(df)
 
-st.line_chart(df[['timestamp', 'temperature']].set_index('timestamp'))
+st.line_chart(df[['place', 'value']].set_index('place'))
