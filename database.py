@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS weather_obs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     place TEXT,
     value REAL,
-    unit TEXT
+    unit TEXT,
+    lat REAL,
+    lon REAL
 )
 """)
 
