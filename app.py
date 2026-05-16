@@ -9,14 +9,13 @@ conn = sqlite3.connect("weather.db")
 
 df = pd.read_sql("SELECT place, value, lat, lon FROM weather_obs", conn)
 
-df["dot_size"] = df["value"] / 20
 
 fig = px.scatter_mapbox(
     df,
     lat="lat",
     lon="lon",
     color="value",
-    size = 2,              
+    size = [2]*len(df),              
     hover_name="place",               
     hover_data=["value"],       
     color_continuous_scale="RdYlBu_r",
