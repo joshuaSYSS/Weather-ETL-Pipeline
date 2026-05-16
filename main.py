@@ -1,7 +1,7 @@
-import sqlite3
 from extract import extract_weather_data
 from transform import transform_weather_data
 from load import load_data
+from locations import hk_locations
 import logging
 logging.basicConfig(
     filename="pipeline.log",
@@ -17,7 +17,7 @@ def run_pipeline():
         
         logging.info("Data extraction completed successfully.")
 
-        clean_df = transform_weather_data(raw_df)
+        clean_df = transform_weather_data(raw_df, hk_locations)
         
         logging.info("Data transformation completed successfully.")
 

@@ -1,0 +1,21 @@
+hk_locations = {
+    "Hong Kong Observatory": {"lat": 22.3022, "lon": 114.1746},
+    "Hong Kong International Airport": {"lat": 22.3094, "lon": 113.9219},
+    "King's Park": {"lat": 22.3120, "lon": 114.1728},
+    "Cheung Chau": {"lat": 22.2011, "lon": 114.0267},
+    "Kai Tak": {"lat": 22.3083, "lon": 114.2144},
+    "Kat O": {"lat": 22.5364, "lon": 114.3020},
+    "Kau Sai Chau": {"lat": 22.3703, "lon": 114.3125},
+    "Lau Fau Shan": {"lat": 22.4690, "lon": 113.9836},
+    "Nei Lak Shan": {"lat": 22.2633, "lon": 113.9111},
+    "Sha Tin": {"lat": 22.3833, "lon": 114.1889},
+    "Tai Po": {"lat": 22.4500, "lon": 114.1667},
+    "Yuen Long": {"lat": 22.4450, "lon": 114.0220},
+    "Tsim Sha Tsui": {"lat": 22.2988, "lon": 114.1722},
+    "Central Pier": {"lat": 22.2866, "lon": 114.1617},
+    "Clear Water Bay": {"lat": 22.2833, "lon": 114.2833},
+    "Happy Valley": {"lat": 22.2700, "lon": 114.1833},
+    "Kowloon City": {"lat": 22.3280, "lon": 114.1910},
+    "Kwun Tong": {"lat": 22.3130, "lon": 114.2250},
+    "Lamma Island": {"lat": 22.2040, "lon": 114.1440}
+}
