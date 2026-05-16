@@ -25,6 +25,14 @@ fig = px.scatter_mapbox(
     mapbox_style="carto-positron"
 )
 
+fig.update_traces(
+    marker=dict(
+        sizemode="diameter",
+        sizeref=2.*df["dot_size"].max()/(40**2),
+        sizemin=4                                 
+    )
+)
+
 fig.update_layout(
     height=600, 
     width=1500
