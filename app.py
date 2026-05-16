@@ -10,27 +10,19 @@ conn = sqlite3.connect("weather.db")
 df = pd.read_sql("SELECT place, value, lat, lon FROM weather_obs", conn)
 
 df["dot_size"] = df["value"] / 50
+#todo: figure out how to scale the dot size
 
 fig = px.scatter_mapbox(
     df,
     lat="lat",
     lon="lon",
-    color="value",
-    size = "dot_size",              
+    color="value",           
     hover_name="place",               
     hover_data=["value"],       
     color_continuous_scale="RdYlBu_r",
     size_max=40,
     zoom=9,
     mapbox_style="carto-positron"
-)
-
-fig.update_traces(
-    marker=dict(
-        sizemode="diameter",
-        sizeref=2.*df["dot_size"].max()/(40**2),
-        sizemin=4                                 
-    )
 )
 
 fig.update_layout(
