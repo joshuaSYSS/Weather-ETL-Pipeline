@@ -7,7 +7,7 @@ st.title("Hong Kong Weather Map")
 
 conn = sqlite3.connect("weather.db")
 
-df = pd.read_sql("SELECT place, value, lat, lon FROM weather", conn)
+df = pd.read_sql("SELECT place, value, lat, lon FROM weather_obs", conn)
 
 fig = px.scatter_mapbox(
     df,
