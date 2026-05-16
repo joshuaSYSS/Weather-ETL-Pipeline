@@ -8,7 +8,7 @@ run_pipeline()
 st.title("Hong Kong Weather Dashboard")
 
 conn = sqlite3.connect("weather.db")
-df = pd.read_sql("SELECT * FROM weather_obs ORDER BY timestamp DESC LIMIT 100", conn)
+df = pd.read_sql("SELECT * FROM weather_obs DESC LIMIT 100", conn)
 
 st.write("Latest Weather Data")
 st.dataframe(df)
