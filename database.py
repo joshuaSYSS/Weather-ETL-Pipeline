@@ -3,6 +3,8 @@ import sqlite3
 conn = sqlite3.connect("weather.db")
 cursor = conn.cursor()
 
+cursor.execute("DROP TABLE IF EXISTS weather_obs")
+
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS weather_obs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
