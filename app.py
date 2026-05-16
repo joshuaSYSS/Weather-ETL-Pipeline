@@ -23,8 +23,8 @@ fig = px.scatter_mapbox(
 )
 
 fig.update_layout(
-    height=800, 
-    width=1000
+    height=600, 
+    width=1500
 )
 
 st.plotly_chart(fig, use_container_width=True)
