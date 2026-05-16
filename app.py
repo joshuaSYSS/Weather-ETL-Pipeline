@@ -18,7 +18,7 @@ fig = px.scatter_mapbox(
     hover_data=["value"],       
     color_continuous_scale="RdYlBu_r",
     size_max=40,
-    zoom=6,
+    zoom=8,
     mapbox_style="carto-positron"
 )
 
